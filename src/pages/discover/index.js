@@ -12,20 +12,11 @@ import {
 import {
     DisCoverLinks
 } from '@/common/local-data';
-import {
-    createAPI
-} from '@/services/axios';
-
 
 
 export default memo(function Discover(props) {
     const route = props.route.routes
-
-    createAPI('banner','',{}).then(res => {
-        console.log(res);
-    })
     
-
     return (
         <DiscoverWrapper>
             <div className="top">
