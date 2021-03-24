@@ -13,6 +13,7 @@ import {
 
 import AppHeader from '@/components/app-header';
 import AppFooter from '@/components/app-footer';
+import ThemePlayer from '@/components/theme-player';
 
 import store from '@/store';
 
@@ -23,6 +24,7 @@ export default memo(function App() {
                 <AppHeader />
                 {renderRoutes(routes)}
                 <AppFooter />
+                <ThemePlayer />
             </BrowserRouter>
         </Provider>
     )

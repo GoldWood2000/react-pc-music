@@ -10,7 +10,9 @@ import {
 } from './style';
 
 import TopBanner from './c-components/top-banner';
-import ThemeHeaderRCM from '@/components/theme-header-rcm';
+import HotRecommend from './c-components/hot-recommend';
+import NewAlbum from './c-components/new-album';
+import RankingList from './c-components/ranking-list';
 function Recommend() {
     return (
         <RecommendWrapper>
@@ -18,9 +20,9 @@ function Recommend() {
             <RecommendContent>
                 <RecommendContentWrapper>
                     <RecommendContentLeft>
-                        <ThemeHeaderRCM title="热门推荐" tab={["华语","流行","摇滚","民谣","电子"]}/>
-                        <ThemeHeaderRCM title="新碟上架" />
-                        <ThemeHeaderRCM title="榜单" />
+                        <HotRecommend />
+                        <NewAlbum />
+                        <RankingList />
                     </RecommendContentLeft>
                 </RecommendContentWrapper>
                 <RecommendContentRight>
