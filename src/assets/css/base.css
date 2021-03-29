@@ -1,0 +1,8 @@
+.ant-message .ant-message-notice-content {
+	position: fixed;
+	left: 50%;
+	bottom: 60px;
+	background-color: rgba(0, 0, 0, .5);
+	color: #fff;
+	transform: translateX(-50%);
+}

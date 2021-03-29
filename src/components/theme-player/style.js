@@ -192,12 +192,22 @@ export const Operator = styled.div`
             background-position: -2px -248px;
         }
         .loop {
-            background-position: -3px -344px;
+            background-position: ${(props) => {
+                switch(props.playOptions) {
+                    case 1:
+                        return '-66px -248px'
+                    case 2: 
+                        return '-66px -344px'
+                    default:
+                        return '-3px -344px'
+                }
+            }}
         }
         .playlist {
             padding-left: 18px;
             text-align: center;
-            color: #ccc;
+            color: #9b9b9b;
+            font-size: 6px;
             width: 59px;
             background-position: -42px -68px;
         }

@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import { useDispatch } from 'react-redux';
 
 import {
     TopRankingWrapper
@@ -6,12 +7,21 @@ import {
 
 import {
     getSizeImage
-} from '@/utils/format-utils'
+} from '@/utils/format-utils';
+
+import {
+    changePlayList
+} from '@/pages/player/store/createActions';
 
 export default memo(function TopRanking(props) {
 
     const { info } = props;
     const { tracks = [] } = info;
+    const dispatch = useDispatch();
+
+    const addMusicToPlayList = (id) => {
+        dispatch(changePlayList(id));
+    }
 
     return (
         <TopRankingWrapper>
@@ -37,7 +47,7 @@ export default memo(function TopRanking(props) {
                                 <div className="info">
                                     <span className="name">{item.name}</span>
                                     <div className="operate">
-                                        <button className="btn play"></button>
+                                        <button className="btn play" onClick={e => { addMusicToPlayList(item.id) }}></button>
                                         <button className="btn addto"></button>
                                         <button className="btn favor"></button>
                                     </div>
