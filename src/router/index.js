@@ -3,17 +3,17 @@ import {
     Redirect
 } from 'react-router-dom';
 
-import Discover from '@/pages/discover';
-import Recommend from '@/pages/discover/c-pages/recommend';
-import TopList from '@/pages/discover/c-pages/toplist';
-import PlayList from '@/pages/discover/c-pages/playlist';
-import DjRadio from '@/pages/discover/c-pages/djradio';
-import Artist from '@/pages/discover/c-pages/artist';
-import Album from '@/pages/discover/c-pages/album';
+const Discover = React.lazy(_ => import('@/pages/discover'));
+const Recommend = React.lazy(_ => import('@/pages/discover/c-pages/recommend'));
+const TopList = React.lazy(_ => import('@/pages/discover/c-pages/toplist'));
+const PlayList = React.lazy(_ => import('@/pages/discover/c-pages/playlist'));
+const DjRadio = React.lazy(_ => import('@/pages/discover/c-pages/djradio'));
+const Artist = React.lazy(_ => import('@/pages/discover/c-pages/artist'));
+const Album = React.lazy(_ => import('@/pages/discover/c-pages/album'));
 
 
-import Friend from '@/pages/friend';
-import Mine from '@/pages/mine';
+const Friend = React.lazy(_ => import('@/pages/friend'));
+const Mine = React.lazy(_ => import('@/pages/mine'));
 
 const routes = [
     {

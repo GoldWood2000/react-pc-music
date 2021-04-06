@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { memo } from 'react';
+import { memo, Suspense } from 'react';
 import {
     BrowserRouter
 } from 'react-router-dom';
@@ -22,7 +22,9 @@ export default memo(function App() {
         <Provider store={store}>
             <BrowserRouter>
                 <AppHeader />
-                {renderRoutes(routes)}
+                <Suspense fallback={<div>loading...</div>}>
+                    {renderRoutes(routes)}
+                </Suspense>
                 <AppFooter />
                 <ThemePlayer />
             </BrowserRouter>

@@ -58,8 +58,7 @@ export default memo(function ThemePlayer() {
 
         let i = 0;
         for (; i < lyrics.length; i++) {
-            const lrcTime = lyrics[i].time;
-            if (e.target.currentTime * 1000 < lrcTime) {
+            if (e.target.currentTime * 1000 < lyrics[i].time) {
                 break
             }
         }
